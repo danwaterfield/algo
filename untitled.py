@@ -29,8 +29,8 @@ while True:
 
 
 class linkedList:
-	def __init__(self, head=None) # keeps track of head
-	self.head = head
+	def __init__(self, head=None):
+		self.head = head
 
 	def insert(self, value):
 		node = linkedListNode(value)
