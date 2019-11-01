@@ -1,4 +1,4 @@
-def binarySearch(list, value):
+def binarySearch(list, value): #2 inputs, the list of things to be searched, and the value you're looking for.
 	low = 0
 	high = len(list)-1 #last item in list, assumes this is a sorted list obviously!
 
