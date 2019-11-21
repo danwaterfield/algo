@@ -1,18 +1,15 @@
-import collections
-import json
+
+import itertools
 
 string = "aaaabbcdddeeeefffggggggg"
-count = collections.Counter()
-
-def compressString(string):
-	string_list = []
-	for char in string:
-		string_list.append(char)
-		count[char] += 1
-	
-	for k, v in count.items():
-		print k + str(v)
-		
 
 
-print(compressString(string))
+def compress(string):
+	if len(string) <= 1:
+		return "Too short!"
+	return ''.join(letter + str(len(list(group)))
+		for letter, group in itertools.groupby(string))
+
+
+if __name__ == '__main__':
+	print(compress(string))
